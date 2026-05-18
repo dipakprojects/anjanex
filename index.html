@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anjanex | Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="ambient-bg"><div class="blob blob-1"></div><div class="blob blob-2"></div></div>
+    
+    <!-- Dynamic Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <section class="hero" id="home">
+        <div class="hero-grid">
+            <div class="hero-text">
+                <h1>The Future of <br><span>Smart Appliances</span></h1>
+                <p>Elevate your culinary lifestyle with our next-generation Smart Kitchen and Home appliances. Engineered for efficiency, designed for absolute elegance.</p>
+                <a href="products.html" class="btn">Explore All Appliances</a>
+            </div>
+            <!-- index.html updated section -->
+            <div class="hero-img-wrapper">
+                <!-- Our new high-quality smart appliance showcase image -->
+                <div class="hero-product-image" style="background-image: url('./images/main_image.png');"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Featured Collection</h2>
+        <!-- Dynamic Products Placeholder (data-limit="3" tells JS to only load 3) -->
+        <div class="product-grid" id="product-grid" data-limit="3">
+            <p style="text-align:center; color: #94a3b8; grid-column: 1/-1;">Loading products from CSV...</p>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="products.html" class="btn btn-outline">View All Products</a>
+        </div>
+    </section>
+
+<!-- Contact Section -->
+    <section class="section" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        
+        <!-- Reusing your existing product-grid class for perfect responsiveness -->
+        <div class="product-grid">
+            
+            <!-- Address Card -->
+            <div class="product-card" style="align-items: center; text-align: center; justify-content: center; padding: 3rem 2rem;">
+                <!-- Added viewBox="0 0 24 24" so the path scales to the center -->
+                <svg style="color: var(--primary); display: block; margin: 0 auto 1.5rem auto;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <h3>Visit Us</h3>
+                <p style="margin-bottom: 0;">Anjanex Industries<br>30, Alok Industrial Estate<br>Opp Shyamji Krushna Verma Nagar<br>Bh GVM, Odhav - SP Ring Road<br>Ahmedabad-382415<br>Gujarat, India</p>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="product-card" style="align-items: center; text-align: center; justify-content: center; padding: 3rem 2rem;">
+                <svg style="color: var(--primary); display: block; margin: 0 auto 1.5rem auto;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <h3>Call Us</h3>
+                <p style="margin-bottom: 0;">
+                    <a href="tel:+919687278474" style="color: var(--text-main); text-decoration: none; font-weight: 600;">+91-9687278474</a><br>
+                    <a href="tel:+919428657537" style="color: var(--text-main); text-decoration: none; font-weight: 600;">+91-9428657537</a><br>
+                    <span style="font-size: 0.9em; color: var(--text-muted); display: block; margin-top: 0.5rem;">Mon-Sat, 9am-6pm</span>
+                </p>
+            </div>
+
+            <!-- Email Card -->
+            <div class="product-card" style="align-items: center; text-align: center; justify-content: center; padding: 3rem 2rem;">
+                <svg style="color: var(--primary); display: block; margin: 0 auto 1.5rem auto;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <h3>Email Us</h3>
+                <p style="margin-bottom: 0;">
+                    <a href="mailto:connectme@anjanex.in" style="color: var(--text-main); text-decoration: none; font-weight: 600;">connectme@anjanex.in</a><br>
+                    <span style="font-size: 0.9em; color: var(--text-muted); display: block; margin-top: 0.5rem;">We reply within 24 hours</span>
+                </p>
+            </div>
+
+
+            
+    </section>
+
+    <!-- Dynamic Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

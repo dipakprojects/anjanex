@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anjanex | About Us</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="ambient-bg"><div class="blob blob-1"></div><div class="blob blob-2"></div></div>
+    <div id="header-placeholder"></div>
+
+<!-- UPDATED: About Anjanex (Corrected flat layout) -->
+    <section class="section" id="about" style="padding-top: 10rem; min-height: 85vh;">
+        <h2 class="section-title">About Anjanex</h2>
+        
+        <!-- Reusing your successful style of changes: updating to a 1fr 1.5fr grid -->
+        <div class="about-grid" style="display: grid; grid-template-columns: 1fr 2.00fr; gap: 4rem; align-items: center;">
+            <div class="about-text">
+                <h3>Elevating the Everyday, Across Your Entire Home</h3>
+                <p>At Anjanex, we believe your environment should work in harmony with your lifestyle. We engineer next-generation solutions for cooking, cleaning, and living. Our smart ecosystem is designed to anticipate your needs, transforming everyday tasks into seamless experiences of performance and elegance.</p>
+                <!-- Adding a context-specific action button, same style as Hero and Featured View all -->
+                <a href="products.html" class="btn">Explore Smart Ecosystem</a>
+            </div>
+            <div class="about-img-wrapper" style="position: relative; display: flex; justify-content: center;">
+                <!-- *** FIXED: removed transform: rotate(-3deg); from the line below *** -->
+                <div class="about-curated-image" style="width: 100%; max-width: 720px; height: 450px; background-image: url('./images/main_image.png'); background-size: cover; background-position: center; border: 1px solid var(--card-border); border-radius: 24px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); overflow: hidden;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="js/script.js"></script>
+</body>
+</html>
