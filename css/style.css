@@ -1,19 +1,20 @@
 /* --- MODERN CSS RESET & VARIABLES --- */
 /* --- MODERN CSS RESET & VARIABLES --- */
-/* --- MODERN CSS RESET & VARIABLES --- */
 :root {
+    /* Kept your brand blue, but shifted the accent to a sophisticated violet for ambient glows */
     --primary: #0ea5e9; 
     --accent: #8b5cf6; 
 
-    /* DEEP SLATE THEME: A cool, rich dark grey that frames dark images perfectly */
-    --bg-gradient: linear-gradient(135deg, #232732 0%, #0d0f14 100%);
+    /* SLEEK BLACK THEME: A very subtle gradient from true black to deep charcoal */
+    --bg-gradient: linear-gradient(135deg, #09090b 0%, #171717 100%);
     
-    /* Slightly brighter cards to create a physical separation from the background */
-    --card-bg: rgba(255, 255, 255, 0.04);
-    --card-border: rgba(255, 255, 255, 0.12);
+    /* Adjusted cards to be slightly more transparent for the glass effect */
+    --card-bg: rgba(255, 255, 255, 0.02);
+    --card-border: rgba(255, 255, 255, 0.05);
     
+    /* Crisp text colors */
     --text-main: #f8fafc;
-    --text-muted: #94a3b8;
+    --text-muted: #a1a1aa;
     --font: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -34,13 +35,13 @@ header {
     width: 100%; 
     z-index: 1000; 
     
-    /* SLATE GLASS: Tinted to match the new background with a clean blur */
-    background: rgba(22, 25, 33, 0.75); 
+    /* SLEEK BLACK GLASS: Almost transparent black with a stronger blur */
+    background: rgba(9, 9, 11, 0.75); 
     backdrop-filter: blur(16px); 
-    -webkit-backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px); /* Safari support */
     
-    /* A slightly more visible line to anchor the navigation */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08); 
+    /* Thinner, more elegant border line */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
 }
 .nav-container { max-width: 1200px; margin: 0 auto; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; }
 .logo {
