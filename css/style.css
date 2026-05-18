@@ -66,37 +66,47 @@ header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(1
 
 /* --- HERO SECTION --- */
 .hero { min-height: 100vh; display: flex; align-items: center; max-width: 1200px; margin: 0 auto; padding: 8rem 2rem 4rem 2rem; }
-.hero-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: center; }
 .hero-text h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 1.5rem; font-weight: 800; }
 .hero-text h1 span { background: linear-gradient(to right, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .hero-text p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2.5rem; }
 .hero-img-wrapper { position: relative; display: flex; justify-content: center; }
 /* --- HERO SECTION UPDATED IMAGE STYLING --- */
 
-/* Remove the old placeholder styling and define the new product container */
+/* Update the hero grid to prevent text from crushing the image */
+.hero-grid { 
+    display: grid; 
+    /* FIX: Added minmax to keep proportions locked */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); 
+    gap: 4rem; 
+    align-items: center; 
+}
+
+/* Update the image container to scale proportionally */
 .hero-product-image {
     width: 100%;
-    max-width: 720px; /* Keep the same structured size */
-    height: 450px;
+    max-width: 720px;
     
-    /* Clean, modern display of the new image */
-    background-size: cover;
+    /* FIX: Replaced height: 450px with aspect-ratio */
+    aspect-ratio: 16 / 10;
+    height: auto; 
+    
+    /* FIX: Use 'contain' if you want zero cropping ever, or keep 'cover' now that the box scales perfectly */
+    background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
     
-    /* Elegant integration: clean border and subtle hover animation */
     border: 1px solid var(--card-border);
     border-radius: 24px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); /* Stronger shadow for premium product feel */
-    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Match hover timing elsewhere */
-    overflow: hidden; /* Ensures borders wrap the image */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
 }
 
-/* Add a sleek interaction effect on hover */
 .hero-product-image:hover {
-    transform: translateY(-5px) scale(1.25);
+    /* Slightly reduced scale so the image doesn't get aggressively cropped on hover */
+    transform: translateY(-5px) scale(1.05);
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
-    border-color: rgba(14, 165, 233, 0.4); /* Subtle glow from --primary color */
+    border-color: rgba(14, 165, 233, 0.4);
 }
 
 /* --- SECTIONS & PRODUCTS --- */
@@ -116,13 +126,6 @@ header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(1
 .contact-grid { grid-template-columns: 1fr 1.5fr; }
 /* --- ABOUT SECTION HERO-STYLE CHANGES --- */
 
-/* Defines the 1:1.5 Hero grid and structure */
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr; /* Match Hero image ratio change */
-    gap: 4rem;
-    align-items: center;
-}
 
 /* Match Hero text styling and add new hierarchy */
 .about-text h3 {
@@ -141,31 +144,42 @@ header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(1
     margin-bottom: 2.5rem;
 }
 
+/* Defines the 1:1.5 Hero grid and structure */
+.about-grid {
+    display: grid;
+    /* FIX: minmax(0, ...) prevents the text from expanding beyond its defined ratio */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); 
+    gap: 4rem;
+    align-items: center;
+}
+
 /* Defines the curated, polished image frame and interaction */
 .about-img-wrapper {
     position: relative;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .about-curated-image {
     width: 100%;
     max-width: 720px;
-    height: 450px;
+    /* FIX: Using aspect-ratio instead of fixed 450px height allows it to scale down smoothly */
+    aspect-ratio: 16 / 10;
+    height: auto; 
     background-size: cover;
     background-position: center;
     border: 1px solid var(--card-border);
     border-radius: 24px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); /* Premium product frame feel */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
     transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
-    overflow: hidden; /* Ensures borders wrap the image */
+    overflow: hidden;
 }
 
-/* Make it interactive like your other hero and product cards */
 .about-curated-image:hover {
-    transform: translateY(-10px) scale(1.25);
+    transform: translateY(-10px) scale(1.05); /* Lowered scale from 1.25 to 1.05 so it doesn't break out of the container aggressively */
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
-    border-color: rgba(14, 165, 233, 0.4); /* Glow from --primary */
+    border-color: rgba(14, 165, 233, 0.4);
 }
 
 /* Ensure proper stacking on mobile (reuse media query concept) */
